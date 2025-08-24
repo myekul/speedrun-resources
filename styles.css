@@ -1,0 +1,32 @@
+:root {
+    --banner: salmon
+}
+
+header {
+    height: 80px
+}
+
+.textBlock {
+    max-width: 520px;
+}
+
+#content a {
+    background-color: var(--banner);
+    color: var(--bannerText);
+    font-family: var(--font2);
+}
+
+#content a img {
+    height: 40px;
+    width: auto
+}
+
+.smallResource {
+    width: 230px !important;
+    height: 50px !important;
+    margin: 0 auto
+}
+
+#resources>div>div>p {
+    max-width: 350px;
+}
