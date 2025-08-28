@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <link id='favicon' rel="shortcut icon" href='images/kettleicon.png'>
     <title>Speedrun Resources</title>
-    <link rel="stylesheet" href="https://myekul.github.io/shared-assets/styles.css">
+    <link rel="stylesheet" href="https://myekul.github.io/shared-assets/styles/styles.css">
     <link rel="stylesheet" href="https://myekul.github.io/shared-assets/myekul/myekul.css">
-    <link rel="stylesheet" href="https://myekul.github.io/shared-assets/cuphead/styles.css">
+    <link rel="stylesheet" href="https://myekul.github.io/shared-assets/cuphead/cuphead.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://myekul.github.io/shared-assets/utils.js"></script>
     <script src="https://myekul.github.io/shared-assets/cuphead/cuphead.js"></script>
-    <script src="https://myekul.github.io/shared-assets/ballpit.js"></script>
+    <script src="https://myekul.github.io/shared-assets/elements/ballpit.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 </head>
 
@@ -26,9 +26,17 @@
         </header>
         <main>
             <div class="sticky">
-                <div class="headerRow"></div>
-                <div class="progress"></div>
+                <div id="headerRow"></div>
+                <div id="progress"></div>
                 <div id="tabsDiv"></div>
+            </div>
+            <div id="pageTitle"></div>
+            <div id="bossSelect"></div>
+            <div class="sticky container" style="top:85px">
+                <div id="boardTitle" class="container background1" style="max-width: 50%;margin:0"></div>
+                <div id='closeBoardTitle' class='grow' style='display:none;margin-left:10px'
+                    onclick="globalBossIndex=-1;action()"><i class="fa fa-close"></i>
+                </div>
             </div>
             <div id="content"></div>
         </main>
@@ -36,6 +44,9 @@
     </div>
 </body>
 
+<script src="variables.js"></script>
+<script src="oddities.js"></script>
+<script src="tabs.js"></script>
 <script src="main.js"></script>
 
 </html>
