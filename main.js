@@ -1,8 +1,7 @@
 setTitle('SPEEDRUN RESOURCES')
 setFooter('2025')
 initializeHash('home')
-setCupheadProjects()
-setDiscord()
+setCuphead()
 const fontAwesomeSet = {
     home: ['Home', 'home'],
     bossInfo: ['Boss Info', 'drivers-license-o'],

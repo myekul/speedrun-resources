@@ -53,8 +53,8 @@ function generateBossInfo() {
                 </div>
             </div>`
         HTMLContent += `</div>`
-    }else{
-        HTMLContent+=`<div class='container'>Click a boss! Isles 1 and 2 are mostly done.</div>`
+    } else {
+        HTMLContent += `<div class='container'>Click a boss! Isles 1 and 2 are mostly done.</div>`
     }
     document.getElementById('content').innerHTML = HTMLContent
     function bossInfoSection(section) {
@@ -70,12 +70,10 @@ function generateBossInfo() {
     }
 }
 function generateBallpit() {
-    let HTMLContent = ballpitRefresh()
-    HTMLContent += `<div id='ballpit'>`
+    document.getElementById('content').innerHTML = `<div id='ballpit'></div>`
+    let HTMLContent = ''
     bossArray.forEach(boss => {
         HTMLContent += `<div class='ball'>${getImage(boss)}</div>`
     })
-    HTMLContent += `</div>`
-    document.getElementById('content').innerHTML = HTMLContent
-    ballpitEngine()
+    setBallpit(HTMLContent)
 }
