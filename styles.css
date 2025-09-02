@@ -10,7 +10,7 @@ header {
     max-width: 520px;
 }
 
-#content a {
+#home a {
     background-color: var(--banner);
     color: var(--bannerText);
     font-family: var(--font2);
@@ -29,4 +29,9 @@ header {
 
 #resources>div>div>p {
     max-width: 350px;
+}
+
+.border {
+    border: 3px solid var(--banner);
+    border-radius: 5px
 }

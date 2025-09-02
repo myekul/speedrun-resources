@@ -1,3 +1,5 @@
 # To do
- - Boss HP
+ - Baroness / King Dice HP
  - Weapon damage
+ - Phantom Expert HP is bugged
+ - DLC oddities

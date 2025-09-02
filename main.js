@@ -1,27 +1,45 @@
 setTitle('SPEEDRUN RESOURCES')
 setFooter('2025')
 initializeHash('home')
-setCuphead()
+setAudio('cuphead')
 const fontAwesomeSet = {
     home: ['Home', 'home'],
     bossInfo: ['Boss Info', 'drivers-license-o'],
+    tutorials: ['Tutorials', 'book'],
     ballpit: ['Ballpit', 'smile-o'],
     shots: ['Shots', 'crosshairs']
 }
 document.addEventListener('DOMContentLoaded', () => {
-    setTabs(['home', 'bossInfo', null, 'ballpit'])
+    setTabs(['home', 'bossInfo', 'tutorials', null, 'ballpit'])
         .then(() => {
             showTab(globalTab)
         })
 })
 function action() {
-    if (globalTab != 'home') setPageTitle(fontAwesomeSet[globalTab][1], fontAwesomeSet[globalTab][0])
+    document.getElementById('content').innerHTML = ''
+    if (globalTab == 'home') {
+        hide('pageTitle')
+    } else {
+        show('pageTitle')
+        setPageTitle(fontAwesomeSet[globalTab][1], fontAwesomeSet[globalTab][0])
+    }
+    if (globalTab == 'bossInfo') {
+        show('bossSelect')
+        show('boardTitleDiv')
+    } else {
+        document.getElementById('bossSelect').innerHTML = ''
+        hide('bossSelect')
+        hide('boardTitleDiv')
+    }
     switch (globalTab) {
         case 'home':
             generateHome()
             break
         case 'bossInfo':
             generateBossInfo()
+            break
+        case 'tutorials':
+            generateTutorials()
             break
         case 'ballpit':
             generateBallpit()
