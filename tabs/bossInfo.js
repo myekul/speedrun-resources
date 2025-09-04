@@ -69,7 +69,7 @@ function parseOddities(boss) {
             <div class='container' style='gap:20px;margin-bottom:30px'>
                 <div class='font2' style='font-size:170%'>${index + 1}.</div>
                 ${part[0]}
-                <div style='max-width:500px'>${part[1]}</div>
+                <div style='width:500px'>${part[1]}</div>
             </div>`
         })
         HTMLContent += `</div>`
@@ -139,7 +139,7 @@ function parseHP(boss) {
                     phase.hp.forEach((subPhase, subindex) => {
                         HTMLContent += `
                             <tr class='${getRowColor(subindex)}'>
-                                <td>${subPhase.name}</td>
+                                <td style='font-size:80%'>${subPhase.name}</td>
                                 <td>${subPhase.hp[globalDifficulty] || '-'}</td>
                             </tr>`
                     })
@@ -190,8 +190,10 @@ function phase(phaseText, phase, extra) {
                 const version = versionSet[elem]
                 if (version) {
                     HTMLContent += `<div class='${version.className}' style='border-radius:5px;padding:1px 3px'>${elem}</div>`
-                } else if (elem == 'whetstone') {
-                    HTMLContent += `<img src='https://myekul.github.io/shared-assets/cuphead/images/inventory/charm/whetstone.png' style='height:21px'>`
+                } else if (elem == 'whetstone' || elem == 'astralcookie') {
+                    HTMLContent += `<img src='https://myekul.github.io/shared-assets/cuphead/images/inventory/charm/${elem}.png' style='height:21px'>`
+                } else if (elem.includes('super')) {
+                    HTMLContent += `<img src='https://myekul.github.io/shared-assets/cuphead/images/inventory/super/${elem}.png' style='height:21px'>`
                 } else {
                     HTMLContent += cupheadShot(elem, 21)
                 }
@@ -203,14 +205,23 @@ function phase(phaseText, phase, extra) {
     return HTMLContent
 }
 function hitbox() {
-    return dim('This is best observed with a hitbox mod.')
+    return dim(' This is best observed with a hitbox mod.')
 }
 function cards() {
-    return dim('You can use this opportunity to generate cards.')
+    return dim(' You can use this opportunity to generate cards.')
 }
 function dim(text) {
     return `<span style='color:gray'>${text}</span>`
 }
 function nmg(text) {
     return `<span style='color:salmon'>${text}</span>`
+}
+function impractical() {
+    return dim(' This is impractical for a speedrun.')
+}
+function phase2KO(regular) {
+    return [phase('Phase 2', 2, [regular ? 'Regular' : '', 'charge', 'super3', 'whetstone']),
+    myekulColor('Phase 2 K.O.') + `: With Giant Ghost and Whetstone,
+                it's possible to end the fight in Phase 2, skipping the lengthy Phase 3 transition.`
+    ]
 }

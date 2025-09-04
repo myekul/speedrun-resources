@@ -80,6 +80,14 @@ const hp = {
     ],
     captainbrineybeard: [
         { name: 'Phase 1', hp: [1000, 936, 952] },
+        // {
+        //     name: 'Phase 1',
+        //     hp: [
+        //         { name: 'Sub-phase 1', hp: [300, 312, 320] },
+        //         { name: 'Sub-phase 2', hp: [300, 312, 320] },
+        //         { name: 'Sub-phase 3', hp: [400, 312, 352] },
+        //     ]
+        // },
         { name: 'Phase 2', id: 2, hp: [null, 264, 448] }
     ],
     calamaria: [
