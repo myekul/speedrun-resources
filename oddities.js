@@ -15,7 +15,8 @@ function setBossInfo() {
                     `Top runners will go to the left and prepare an up+right Lobber to play around Oddity #1.`
                 ],
                 [phase('Phase 2', 2, ['lobber', 'spread']),
-                    `After the Phase 2 Lobber trap, top runners will move left and aim up+right with Spread so only a singular bullet will be eaten by Oddity #2.`
+                myekulColor('"Lobbah"') + `: After the Phase 2 Lobber trap,
+                    top runners will move left and aim up+right with Spread so only a singular bullet will be eaten by Oddity #2.`
                 ]
             ]
         },
@@ -69,9 +70,9 @@ function setBossInfo() {
             ],
             tricks: [
                 [phase('Phase 2', 2, ['1.1', 'lobber']),
-                myekulColor('Goopy Quads') + `: If you shoot up+down Lobber EXs with precise timing during the Oddity #1 sprite swap,
-                you can hit splash damage on both hitboxes and land the EXs for 4x damage each.
-                ${dim('This has a 6-frame window.')}`
+                myekulColor('Goopy Quads') + `: If you shoot up+down Lobber EXs with precise timing during the Oddity #2 sprite swap,
+                you can hit splash damage on both hitboxes and land the EXs for 4x damage each.`
+                + dim('This has a 6-frame window.')
                 ],
                 [phase('Phase 2', 2, ['1.1', 'lobber']),
                 myekulColor('Triple Triple') + `: If you damage boost on small Goopy after grabbing parries, you will be perfectly aligned for a triple on small Goopy.
@@ -196,8 +197,8 @@ function setBossInfo() {
             tricks: [
                 [phase('Phase 2/3', 2, ['charge']),
                 `At the end of Phase 2, look at the bottom of the balloon.
-                    When the balloon string leaves the screen, that's the earliest moment you can shoot an upward Charge shot to hit the Phase 3 hitbox.
-                    ${dim('Note that there is a 50/50 chance you will get the right RNG.')}`
+                    When the balloon string leaves the screen, that's the earliest moment you can shoot an upward Charge shot to hit the Phase 3 hitbox.`
+                + dim('Note that there is a 50/50 chance you will get the right RNG.')
                 ],
             ]
         },
@@ -271,8 +272,8 @@ function setBossInfo() {
         drkahlsrobot: {
             oddities: [
                 [phase('Phase 1'),
-                `You can aim a bomb between the chest and hatch to deal damage to both parts.
-                    ${dim(`Note that indirect splash damage does not deal as much damage as a direct hit.`)}`
+                `You can aim a bomb between the chest and hatch to deal damage to both parts.`
+                + dim(`Note that indirect splash damage does not deal as much damage as a direct hit.`)
                 ],
                 [phase('Phase 1', '', ['Major Glitch', '1.0']),
                     `A major skip exists on the Legacy 1.0 version.
@@ -349,8 +350,8 @@ function setBossInfo() {
             ],
             tricks: [
                 [phase('Phase 1/2', '', ['1.0', '1.1', 'lobber']),
-                `Taking advantage of the Oddity #2 sprite swap, you can position yourself in a triple spot to land a 6x Lobber EX with precise timing.
-                    ${dim('This has a 6-frame window, and it works on both sides.')}`
+                `Taking advantage of the Oddity #2 sprite swap, you can position yourself in a triple spot to land a 6x Lobber EX with precise timing.`
+                + dim('This has a 6-frame window, and it works on both sides.')
                 ],
             ]
         },
@@ -361,8 +362,8 @@ function setBossInfo() {
                     the delay between shots will be longer than a 1-3 or a 3-1.`
                 ],
                 [phase('Shark'),
-                `You can shoot the shark to make it leave the screen faster.
-                    ${dim('42% faster on Simple, 30% on Regular, 18% on Expert.')}`
+                `You can shoot the shark to make it leave the screen faster.`
+                + dim('42% faster on Simple, 30% on Regular, 18% on Expert.')
                 ],
                 [phase('Squid'),
                     `You can shoot the squid to kill it and begin the next attack.`
@@ -658,8 +659,8 @@ function setBossInfo() {
             advancedTricks: [
                 [phase('Phase 3', 3, ['lobber']),
                 myekulColor('Lunar Eclipse') + `: Taking advantage of Oddity #3,
-                you can instantly end the fight if you do up+down Lobber EXs on the anteater's trunk at the bottom left/right corner of the screen.
-                This has a 1/3 success rate due to RNG.`
+                you can instantly end the fight if you do up+down Lobber EXs on the anteater's trunk at the bottom left/right corner of the screen.`
+                + dim('This has a 1/3 success rate due to RNG.')
                 ],
                 phase2KO()
             ]

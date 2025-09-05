@@ -205,19 +205,19 @@ function phase(phaseText, phase, extra) {
     return HTMLContent
 }
 function hitbox() {
-    return dim(' This is best observed with a hitbox mod.')
+    return dim('This is best observed with a hitbox mod.')
 }
 function cards() {
-    return dim(' You can use this opportunity to generate cards.')
+    return dim('You can use this opportunity to generate cards.')
 }
 function dim(text) {
-    return `<span style='color:gray'>${text}</span>`
+    return `<span style='color:gray'>&nbsp;${text}</span>`
 }
 function nmg(text) {
     return `<span style='color:salmon'>${text}</span>`
 }
 function impractical() {
-    return dim(' This is impractical for a speedrun.')
+    return dim('This is impractical for a speedrun.')
 }
 function phase2KO(regular) {
     return [phase('Phase 2', 2, [regular ? 'Regular' : '', 'charge', 'super3', 'whetstone']),

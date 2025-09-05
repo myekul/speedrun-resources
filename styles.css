@@ -35,3 +35,71 @@ header {
     border: 3px solid var(--banner);
     border-radius: 5px
 }
+
+/* Monkey Tool */
+
+.monkey {
+    background-color: #63b5a9
+}
+
+#tableDiv table {
+    border-spacing: 3px
+}
+
+#tableDiv td {
+    width: 200px;
+    height: 150px;
+    background-color: var(--banner);
+}
+
+#buttons .button {
+    width: 70px;
+    height: 28px;
+    font-size: 130%
+}
+
+#buttons .container {
+    justify-content: left;
+}
+
+.mdhrCrest {
+    background-color: white !important
+}
+
+.mdhrOther {
+    background-color: black !important;
+}
+
+.cuphead1 {
+    background-color: crimson !important;
+}
+
+.mugman {
+    background-color: dodgerblue !important;
+}
+
+.diceLeft {
+    background-color: limegreen !important;
+}
+
+.diceRight {
+    background-color: var(--cuphead) !important;
+}
+
+/* Graveyard Tool */
+
+.graveyardColor {
+    background-color: darkseagreen;
+}
+
+.graveyard.button {
+    font-family: 'cuphead-felix';
+    padding-top: 2px;
+    margin: 8px 0;
+    height: 24px !important; 
+    width: 150px !important
+}
+
+#graveyard div {
+    background-color: var(--banner);
+}

@@ -6,6 +6,8 @@ const fontAwesomeSet = {
     home: ['Home', 'home'],
     bossInfo: ['Boss Info', 'drivers-license-o'],
     tutorials: ['Tutorials', 'book'],
+    monkeyTool: ['Monkey Tool', 'wrench'],
+    graveyardTool: ['Graveyard Tool', 'wrench'],
     ballpit: ['Ballpit', 'smile-o'],
     shots: ['Shots', 'crosshairs']
 }
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 function action() {
     document.getElementById('content').innerHTML = ''
-    if (globalTab == 'home') {
+    if (['home'].includes(globalTab)) {
         hide('pageTitle')
     } else {
         show('pageTitle')
@@ -40,6 +42,12 @@ function action() {
             break
         case 'tutorials':
             generateTutorials()
+            break
+        case 'monkeyTool':
+            generateMonkeyTool()
+            break
+        case 'graveyardTool':
+            generateGraveyardTool()
             break
         case 'ballpit':
             generateBallpit()
