@@ -2,15 +2,6 @@ setTitle('SPEEDRUN RESOURCES')
 setFooter('2025')
 initializeHash('home')
 setAudio('cuphead')
-const fontAwesomeSet = {
-    home: ['Home', 'home'],
-    bossInfo: ['Boss Info', 'drivers-license-o'],
-    tutorials: ['Tutorials', 'book'],
-    monkeyTool: ['Monkey Tool', 'wrench'],
-    graveyardTool: ['Graveyard Tool', 'wrench'],
-    ballpit: ['Ballpit', 'smile-o'],
-    shots: ['Shots', 'crosshairs']
-}
 document.addEventListener('DOMContentLoaded', () => {
     setTabs(['home', 'bossInfo', 'tutorials', null, 'ballpit'])
         .then(() => {
