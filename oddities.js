@@ -153,7 +153,8 @@ function setBossInfo() {
                 ],
                 [phase('Phase 1/2/3', 3, ['1.0']),
                     `You can hit an offscreen hitbox by sitting in the bottom left and shooting bombs.
-                    Doing enough overdamage will cause the fight to get locked in Phase 3.`
+                    Doing enough overdamage will cause the fight to get locked in Phase 3.
+                    You can end the fight in this glitched state.`
                 ],
                 [phase('Phase 4', 4),
                     `If you hug the left side of the screen while the turban is flying toward you, you can lock the turban in place.`
@@ -478,6 +479,10 @@ function setBossInfo() {
                     `If you pause buffer at a certain point while falling down the hole,
                     you can skip the Phase 2 intro animation and regain control of your character after using an EX.`
                 ],
+                [phase('Phase 1/2/3', 2),
+                myekulColor("Devil Freeze") + `: If you push the Devil's HP past the Phase 2/3 damage threshold immediately after the pause buffer,
+                you can glitch out the fight, causing the screen to stop scrolling.`
+                ],
                 [phase('Phase 2/3/4', 2, ['converge', 'super1', 'super3']),
                     `The eyes in Phase 2/3/4 have separate hitboxes. You can hit both with a Converge EX for double damage.
                     You can also use Cup/Mug's Super Art I or Ms. Chalice's Super Art III.`
@@ -499,11 +504,7 @@ function setBossInfo() {
                 [phase('Phase 1', '', ['1.0', 'lobber', 'roundabout']),
                 myekulColor("Devil's Kiss") + `: Taking advantage of various exploits mentioned above,
                 it's possible to end the fight in Phase 1.`
-                ],
-                [phase('Phase 1/2/3', 2, ['1.0', 'lobber', 'roundabout']),
-                myekulColor("Devil Freeze") + `: If you push the Devil's HP past the Phase 2/3 damage threshold immediately after the pause buffer,
-                you can glitch out the fight, causing the screen to stop scrolling, allowing you to maximize damage on the Phase 3 hitboxes.`
-                ],
+                ]
             ]
         },
         glumstonethegiant: {

@@ -21,20 +21,25 @@
                 <img src="images/kettle.png" style="height:70px">
                 <div id="title"></div>
             </div>
-            <div class="button monkey font2"
-                style="font-size:110%;position:absolute;top:3px;right:8px;height:32px;width:200px;;border-radius:20px;gap:8px"
-                onclick="showTab('monkeyTool')">
-                <img src="images/monkeyTool/monkey.png" style="height:30px">MONKEY TOOL
-            </div>
-            <div class="button graveyardColor"
-                style="font-family:cuphead-felix;font-size:110%;position:absolute;top:40px;right:8px;height:32px;width:270px;border-radius:20px;gap:4px"
-                onclick="showTab('graveyardTool')">
-                <img src="images/graveyardTool/podium.png" style="height:45px">GRAVEYARD TOOL
-            </div>
         </header>
         <main>
             <div class="sticky">
-                <div id="headerRow"></div>
+                <div id="headerRow" class="container">
+                    <div class="button monkey" style="height:28px;width:60px;border-radius:20px;gap:8px"
+                        onclick="showTab('monkeyTool')">
+                        <img src="images/monkeyTool/monkey.png" style="height:25px">
+                    </div>
+                    <div class="button graveyardColor"
+                        style="height:28px;width:60px;border-radius:20px;gap:4px"
+                        onclick="showTab('graveyardTool')">
+                        <img src="images/graveyardTool/podium.png" style="height:42px">
+                    </div>
+                    <!-- <div class="button cuphead"
+                        style="height:28px;width:60px;border-radius:20px;gap:4px"
+                        onclick="showTab('rumorTool')">
+                        <img src="images/platform.png" style="height:20px">
+                    </div> -->
+                </div>
                 <div id="progress"></div>
                 <div id="tabsDiv"></div>
             </div>
@@ -59,6 +64,7 @@
 <script src="tabs/bossInfo.js"></script>
 <script src="tabs/monkeyTool.js"></script>
 <script src="tabs/graveyardTool.js"></script>
+<script src="tabs/rumorTool.js"></script>
 <script src="tabs/tabs.js"></script>
 
 <script src="main.js"></script>

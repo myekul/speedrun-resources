@@ -40,6 +40,9 @@ function action() {
         case 'graveyardTool':
             generateGraveyardTool()
             break
+            case 'rumorTool':
+            generateRumorTool()
+            break
         case 'ballpit':
             generateBallpit()
             break
