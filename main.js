@@ -3,7 +3,8 @@ setFooter('2025')
 initializeHash('home')
 setAudio('cuphead')
 document.addEventListener('DOMContentLoaded', () => {
-    setTabs(['home', 'bossInfo', 'tutorials', null, 'ballpit'])
+    // Tutorials
+    setTabs(['home', 'bossInfo', null, 'ballpit'])
         .then(() => {
             showTab(globalTab)
         })
@@ -63,4 +64,9 @@ function updateBoardTitle() {
     } else {
         hide('closeBoardTitle')
     }
+}
+function openInfo() {
+    fetch(`html/${globalTab}Info.html`)
+        .then(r => r.text())
+        .then(t => openModal(t, 'INFO'))
 }

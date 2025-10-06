@@ -38,7 +38,7 @@ header {
 
 /* Monkey Tool */
 
-.monkey {
+.monkeyColor {
     background-color: #63b5a9
 }
 
@@ -49,7 +49,7 @@ header {
 #tableDiv td {
     width: 200px;
     height: 150px;
-    background-color: var(--banner);
+    background-color: #63b5a9;
 }
 
 #buttons .button {
@@ -96,10 +96,51 @@ header {
     font-family: 'cuphead-felix';
     padding-top: 2px;
     margin: 8px 0;
-    height: 24px !important; 
+    height: 24px !important;
     width: 150px !important
 }
 
 #graveyard div {
-    background-color: var(--banner);
+    background-color: darkseagreen;
+}
+
+.bracket {
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 190px;
+}
+
+.bracket::before,
+.bracket::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: gray;
+}
+
+.bracket::before {
+    top: 0;
+    /* top line */
+}
+
+.bracket::after {
+    bottom: 0;
+    /* bottom line */
+}
+
+.bracket .side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    background: gray;
+}
+
+.infoButton {
+    width: 60px;
+    font-family: var(--font2);
+    font-size: 100%
 }

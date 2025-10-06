@@ -1,0 +1,36 @@
+<div class="container" style="gap:50px;padding:20px 0">
+    <img src="images/rumorTool/screenshot.png" style="height:500px">
+    <div style="width:700px;white-space: normal;">
+        <div>
+            Pictured to the left is the arrangement of the starting platforms for the Rumor Honeybottoms fight.
+            After this 12-row sequence has scrolled beyond the screen,
+            the game tries to remove one (1) platform from every subsequent row.
+        </div>
+        <br>
+        <div>
+            The Rumor Tool allows you to generate a sequence of platforms,
+            <span class="myekulColor">BeePlatforms.txt</span>,
+            which can be injected into the debug mod.
+            To do this, place the generated BeePlatforms.txt file in the same directory as the Cuphead executable,
+            and in the debug menu, enable "<span class="myekulColor">Read Missing Platforms from file</span>" under the
+            Rumor Honeybottoms RNG section.
+        </div>
+        <br>
+        <div>
+            There are some quirks with the platform generation logic.
+            Notably, there are some cases where certain platforms will not be removed.
+            In short, the game tries to prevent consecutive missing platforms on the far left/right edges of the screen.
+            The tool automatically applies this logic and highlights the platforms white.
+            As a user of this tool, you don't need to worry about these quirks.
+            Just fiddle around with the interface and see what happens.
+        </div>
+        <br>
+        <div>The visual sprite references are for Regular mode,
+            and they are dependent on getting a perfect police bee kill, where he only stops once.
+        </div>
+        <br>
+        <div style="color:gray">
+            Want a better view? Try using Crtl + and Crtl -!
+        </div>
+    </div>
+</div>

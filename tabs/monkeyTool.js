@@ -42,18 +42,13 @@ function createTable(code) {
     }
     document.getElementById('tableDiv').innerHTML = HTMLContent
 }
-function monkeyToolInfo() {
-    fetch('html/monkeyInfo.html')
-        .then(r => r.text())
-        .then(t => openModal(t, 'INFO'))
-}
 async function generateMonkeyTool() {
     await setHTML('html/monkey.html', 'content')
     const buttons = document.querySelectorAll('#buttons > div > div')
     buttons.forEach(button => {
         button.addEventListener('click', function () {
-            buttons.forEach(b => b.classList.remove('activeBanner'))
-            this.classList.add('activeBanner')
+            buttons.forEach(b => b.classList.remove('monkeyColor'))
+            this.classList.add('monkeyColor')
             playSound('move')
         })
     })

@@ -1,5 +1,8 @@
 <div id="tool">
-    <div class="container" style="padding:30px 0;gap:30px">
+    <div class="container" style="justify-content:center;margin-bottom:10px">
+        <span class="button infoButton monkeyColor" onclick="openInfo()">INFO</span>
+    </div>
+    <div class="container" style="gap:30px">
         <div id="tableDiv"></div>
         <div>
             <div class="container"><img src="images/monkeyTool/mdhr.png" style="height:60px;padding-bottom:5px"></div>
@@ -32,14 +35,11 @@
                 <div class="container">
                     <div class="button" onclick="createTable(811)">8-11</div>
                 </div>
-                <div class="container" style="justify-content:center;">
-                    <div class="button banner" style="font-size:100%;width:100px" onclick="createTable()">
-                        Reset</div>
-                </div>
-                <div class="container" style="justify-content:center;margin-top:20px">
-                    <span class="button font2" style="font-size:100%;width:60px" onclick="monkeyToolInfo()">
-                        INFO</span>
-                </div>
+            </div>
+            <div class="container" style="justify-content:center;">
+                <div class="button monkeyColor" style="font-size:100%;width:100px"
+                    onclick="createTable();playSound('carddown')">
+                    Reset</div>
             </div>
         </div>
     </div>
