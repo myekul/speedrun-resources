@@ -144,3 +144,7 @@ header {
     font-family: var(--font2);
     font-size: 100%
 }
+
+#tabs {
+    width: 300px !important
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link id='favicon' rel="shortcut icon" href='images/kettleicon.png'>
-    <title>Speedrun Resources</title>
+    <title>Runner Resources</title>
     <link rel="stylesheet" href="https://myekul.github.io/shared-assets/styles/styles.css">
     <link rel="stylesheet" href="https://myekul.github.io/shared-assets/myekul/myekul.css">
     <link rel="stylesheet" href="https://myekul.github.io/shared-assets/cuphead/cuphead.css">
@@ -48,7 +48,7 @@
             <div id='boardTitleDiv' class="sticky container" style="top:85px">
                 <div id="boardTitle" class="container background1" style="max-width: 50%;margin:0"></div>
                 <div id='closeBoardTitle' class='grow' style='display:none;margin-left:10px'
-                    onclick="globalBossIndex=-1;action();playSound('move')"><i class="fa fa-close"></i>
+                    onclick="globalBossIndex=-1;updateBoardTitle();action();playSound('move')"><i class="fa fa-close"></i>
                 </div>
             </div>
             <div id="content"></div>
@@ -62,6 +62,8 @@
 <script src="hp.js"></script>
 
 <script src="tabs/bossInfo.js"></script>
+<script src="tabs/hp.js"></script>
+<script src="tabs/shotInfo.js"></script>
 <script src="tabs/monkeyTool.js"></script>
 <script src="tabs/graveyardTool.js"></script>
 <script src="tabs/rumorTool.js"></script>

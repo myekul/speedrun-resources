@@ -4,7 +4,7 @@ function setBossInfo() {
         therootpack: {
             oddities: [
                 [phase('Phase 1'),
-                    `Phase 1 doesn't take any damage until the potato opens its mouth.`
+                    `Phase 1 doesn't begin taking damage until the potato opens its mouth.`
                 ],
                 [phase('Phase 2', 2),
                     `The first projectile that lands on the onion will not deal any damage.`
@@ -12,7 +12,7 @@ function setBossInfo() {
             ],
             tricks: [
                 [phase('Phase 1', '', ['lobber']),
-                    `Top runners will go to the left and prepare an up+right Lobber to play around Oddity #1.`
+                    `At the start of the fight, top runners will go to the left and prepare an up+right Lobber to play around Oddity #1.`
                 ],
                 [phase('Phase 2', 2, ['lobber', 'spread']),
                 myekulColor('"Lobbah"') + `: After the Phase 2 Lobber trap,
@@ -420,8 +420,8 @@ function setBossInfo() {
                     `On these fights, if you parry the boss after the knockout, you can generate cards until the screen starts fading out.`
                 ],
                 [phase('1. Tipsy Troop', 1, ['charge']),
-                    `If you hold up+right, walk up to the boss, and then lock and release your Charge shot when it's ready,
-                    you'll position yourself in a spot where you can shoot double damage Charge shots on the first two glasses.`
+                    `At the start of the fight: if you hold up+right, walk up to the boss, and then lock and release your Charge shot when it's ready,
+                    you'll position yourself in a spot where you can shoot double damage Charge shots on the front two glasses.`
                 ],
                 [phase('1. Tipsy Troop', 1, ['converge']),
                     `Converge will annihilate this fight. Lock and shoot to end alcoholism.`
@@ -438,7 +438,7 @@ function setBossInfo() {
                 ],
                 [phase('9. Mr. Chimes', 9),
                     `The card game is not entirely random.
-                    Try myekul's <a href='https://myekul.github.io/monkey-tool' class='clickable' style='color:#63b5a9'>Monkey Tool</a>
+                    Try the <span onclick="showTab('monkeyTool');playSound('move')" class='clickable' style='color:#63b5a9'>Monkey Tool</span>
                     to learn more.`
                 ],
                 [phase('9. Mr. Chimes', 9, ['1.0']),
@@ -528,7 +528,8 @@ function setBossInfo() {
                     the fight will get locked in Phase 2. You can end the fight in this glitched state.`
                 ],
                 [phase('Phase 1/2', 2),
-                    `The duration of Phase 1 will determine the speed at which the puppets appear at the start of Phase 2.`
+                `The duration of Phase 1 will determine the speed at which the puppets appear at the start of Phase 2.`
+                + dim('This can be advantageous for Charge.')
                 ],
                 [phase('Phase 2', 2),
                     `Glumstone's arm will block bullets. For this reason, do not aim horizontally.
@@ -650,7 +651,7 @@ function setBossInfo() {
                 ],
                 [phase('Phase 2/3', 2),
                 `After Phase 2 ends, the dancing bug will fall onto the ground.
-                    During this period, you can shoot her overdamage into the next phase.
+                    During this period, you can shoot her for overdamage into the next phase.
                     She will stop taking damage after she gets up and starts running toward the gramophone.`+ cards()
                 ],
                 [phase('Phase 3', 4),

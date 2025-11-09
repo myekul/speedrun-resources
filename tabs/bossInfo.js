@@ -7,26 +7,29 @@ function generateBossSelect() {
             HTMLContent += `<td style='padding:5px'></td>`
             isle = boss.isle
         }
-        HTMLContent += `<td id='${boss.id}Button' class='grow ${boss.id}' style='width:38px' onclick="globalBossIndex=${index};playSound('category_select');action()">${getImage(boss, 38)}</td>`
+        HTMLContent += `<td id='${boss.id}Button' class='grow ${boss.id}' style='width:38px' onclick="globalBossIndex=${index};bossSelect('${boss.id}')">${getImage(boss, 38)}</td>`
     })
     HTMLContent += `</tr></table>`
     document.getElementById('bossSelect').innerHTML = HTMLContent
 }
+function bossSelect(id) {
+    const className = 'selected'
+    document.querySelectorAll('#bossTabsRow td').forEach(button => {
+        button.classList.remove(className)
+    })
+    const button = document.getElementById(id + 'Button')
+    button?.classList.add(className)
+    updateBoardTitle()
+    playSound('category_select')
+    action()
+}
 function generateBossInfo() {
     if (document.getElementById('bossSelect').children.length == 0) generateBossSelect()
-    updateBoardTitle()
     setBossInfo()
     const boss = bossArray[globalBossIndex]
     HTMLContent = ''
     if (boss) {
-        const className = 'selected'
-        document.querySelectorAll('#bossTabsRow td').forEach(button => {
-            button.classList.remove(className)
-        })
-        const button = document.getElementById(boss.id + 'Button')
-        button?.classList.add(className)
         HTMLContent = `<div class='container' style='align-items:flex-start'>`
-        HTMLContent += parseHP(boss);
         HTMLContent += parseOddities(boss)
         HTMLContent += `</div>`
     } else {
@@ -75,81 +78,6 @@ function parseOddities(boss) {
         HTMLContent += `</div>`
         return HTMLContent
     }
-}
-function parseHP(boss) {
-    let HTMLContent = ''
-    const bossHP = hp[boss.id]
-    if (bossHP) {
-        HTMLContent += `<div style='margin-top:70px;margin-right:5px'>`;
-        difficulties.forEach((difficulty, index) => {
-            if (!(index == 0 && !bossHP[0].hp[0])) {
-                HTMLContent += `<div class='button ${index == globalDifficulty ? 'selected' : difficulty.toLowerCase()}' style='width:80px' onclick="globalDifficulty=${index};playSound('move');action()">${difficulty}</div>`
-            } else if (globalDifficulty == 0) {
-                globalDifficulty = 1
-            }
-        })
-        HTMLContent += `</div>`
-        bossHP.totalHP = 0
-        bossHP.forEach(phase => {
-            phase.phaseHP = 0
-            if (phase.hp[globalDifficulty]?.hp) {
-                phase.hp.forEach(subPhase => {
-                    bossHP.totalHP += subPhase.hp[globalDifficulty]
-                    phase.phaseHP += subPhase.hp[globalDifficulty]
-                })
-            } else {
-                bossHP.totalHP += phase.hp[globalDifficulty]
-                phase.phaseHP = phase.hp[globalDifficulty]
-            }
-        })
-        HTMLContent += `<div style='margin-right:50px'><div>${fontAwesomeText('heart', 'HP')}</div>`;
-        HTMLContent += `<table id='bossCard' class='background1' style='border:3px solid var(--banner);border-radius:5px'>`
-        const difficulty = difficulties[globalDifficulty]
-        HTMLContent += `<tr><td colspan=2 class='${difficulty.toLowerCase()}' style='text-align:center;padding:5px'>${difficulty.toUpperCase()}</td></tr>`
-        bossHP.forEach((phase, index) => {
-            if (phase.phaseHP) {
-                HTMLContent += `
-            <tr>
-                <td colspan=2 style='width:150px'>
-                ${bossPhaseHeader(boss, phase.id, phase.name)}
-                </td>
-            </tr>`
-                HTMLContent += `<tr class='background2' style='font-size:80%'>`
-                let sum = 0
-                bossHP.forEach((phase, index2) => {
-                    if (index <= index2) sum += phase.phaseHP
-                })
-                HTMLContent += `<td>${sum} / <span style='font-size:70%'>${bossHP.totalHP}</span></td>`
-                HTMLContent += `<td style='text-align:right;font-size:110%'>${phase.phaseHP} HP</td>`
-                HTMLContent += `</tr>`
-                HTMLContent += `<tr><td colspan=2>
-            <div class='container'>`
-                for (let i = bossHP.length - 1; i >= 0; i--) {
-                    const phase2 = bossHP[i]
-                    if (phase2.phaseHP) {
-                        let color = 'salmon'
-                        if (index == i) color = 'lightpink'
-                        if (i < index) color = 'var(--background1)'
-                        HTMLContent += `<div style='height:16px;width:${phase2.phaseHP / bossHP.totalHP * 100}%;border-right:2px solid var(--background1);background-color:${color}'></div>`
-                    }
-                }
-                HTMLContent += `</div>
-            </td></tr>`
-                if (phase.hp[globalDifficulty]?.hp) {
-                    phase.hp.forEach((subPhase, subindex) => {
-                        HTMLContent += `
-                            <tr class='${getRowColor(subindex)}'>
-                                <td style='font-size:80%'>${subPhase.name}</td>
-                                <td>${subPhase.hp[globalDifficulty] || '-'}</td>
-                            </tr>`
-                    })
-                }
-            }
-        })
-        HTMLContent += `</table>`
-        HTMLContent += `</div>`
-    }
-    return HTMLContent
 }
 function bossPhaseHeader(boss, phaseID, phaseName) {
     return `

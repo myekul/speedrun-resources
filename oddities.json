@@ -1,0 +1,99 @@
+{
+    "therootpack": {
+        "oddities": [
+            {
+                "phase": "Phase 1",
+                "img": "",
+                "text": "Phase 1 doesn't begin taking damage until the potato opens its mouth."
+            },
+            {
+                "phase": "Phase 2",
+                "img": "2",
+                "text": "The first projectile that lands on the onion will not deal any damage."
+            }
+        ],
+        "tricks": [
+            {
+                "phase": "Phase 1",
+                "img": "",
+                "text": "At the start of the fight, top runners will go to the left and prepare an up+right Lobber to play around Oddity #1.",
+                "extra": [
+                    "lobber"
+                ]
+            },
+            {
+                "phase": "Phase 2",
+                "img": "2",
+                "text": "<span class='myekulColor'>'Lobbah'</span>: After the Phase 2 Lobber trap, top runners will move left and aim up+right with Spread so only a singular bullet will be eaten by Oddity #2.",
+                "extra": [
+                    "lobber",
+                    "spread"
+                ]
+            }
+        ]
+    },
+    "ribbyandcroaks": {
+        "oddities": [
+            {
+                "phase": "Phase 1",
+                "img": "",
+                "text": "If you crouch and shoot in a specific spot in front of Ribby, you can hit both frogs to generate extra cards. <span class='myekulColor'>This will NOT deal double damage</span> until Phase 2."
+            },
+            {
+                "phase": "Phase 2",
+                "img": "2",
+                "text": "After the fight has crossed the Phase 1/2 damage threshold, you can shoot in the Oddity #1 spot to hit both frogs for double damage."
+            },
+            {
+                "phase": "Phase 3",
+                "img": "3",
+                "text": "After the fight has crossed the Phase 2/3 damage threshold, you cannot deal additional overdamage. Your next opportunity to deal damage is when the slot machine opens up."
+            }
+        ],
+        "tricks": [
+            {
+                "phase": "Phase 2",
+                "img": "2",
+                "text": "Taking advantage of Oddity #2, you can shoot downward Lobber EXs to deal quadruple damage.",
+                "extra": [
+                    "1.0",
+                    "1.1",
+                    "lobber"
+                ]
+            },
+            {
+                "phase": "Phase 3",
+                "img": "3",
+                "text": "After parrying the slot machine arm, the slots will spin and then flash like '1-2-3, 1-2-3, 1-2-3'. At the third 1 in that sequence, that's the visual cue to shoot your Lobber EX.",
+                "extra": [
+                    "lobber"
+                ]
+            },
+            {
+                "phase": "Phase 3",
+                "img": "3",
+                "text": "If you parry the slot machine arm and start holding shoot during the parry lag, and you pair this with Trick #2, your Lobber timing will be perfect for a same-weapon Kaleva swap EX when the slot machine opens up.",
+                "extra": [
+                    "lobber"
+                ]
+            }
+        ],
+        "advancedTricks": [
+            {
+                "phase": "Phase 3",
+                "img": "3",
+                "text": "It's possible to hit 4x or even 5x Lobber EXs when the EX collides with the ground and a tiger platform on the same frame.",
+                "extra": [
+                    "1.0",
+                    "1.1",
+                    "lobber"
+                ]
+            },
+            {
+                "phase": "Phase 3",
+                "img": "3",
+                "text": "You can do a frame-perfect pause buffer at the end of a slot machine attack to continue attacking the machine after you're supposed to."
+            }
+        ]
+    }
+}
