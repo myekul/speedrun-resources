@@ -21,40 +21,62 @@ function generateShotInfo() {
         [...row1, ...row2].forEach((shot, index) => {
             HTMLContent += shotDetails(shot, index)
         })
-        HTMLContent += `</div></div>`
+        HTMLContent += `</div></div>
+        <div class='container textBlock dim' style='font-size:80%;margin-top:20px'>
+        *Crackshot EX:
+        <br>-The last (5th) bullet will hit for double damage, for a total of 21 damage.
+        <br>-Parrying the turret will launch it to a target for 12 damage.
+        <br>-If an enemy collides with the turret, it will deal 14 damage.
+        </div>`
     }
     function shotDetails(shot, index) {
         const shotObject = shotData[shot]
         let HTMLContent = ''
         HTMLContent += `
-        <div class='container ${getRowColor(index + 1)}' style='padding:10px;width:700px;margin:0 auto'>
+        <div class='container ${getRowColor(index + 1)}' style='padding:10px;width:900px;margin:0 auto'>
             <div style='width:80px'>
-                <div style='margin-right:10px'>${shotObject.dps}</div>
-                <div style='color:gray;font-size:80%'>DPS</div>
+                <div style='font-size:110%;margin-right:10px'>${shotObject.dps}</div>
+                <div class='dim' style='font-size:80%'>DPS</div>
             </div>
-            <div style='width:350px'>
+            <div style='width:330px'>
                 <div class='container' style='justify-content:left;gap:10px'>
                     <div style='margin-top:5px'>${cupheadShot(shot, 48)}</div>
                     <div>
                         <div class='font2' style='font-size:150%;margin-top:3px'>${shotObject.name}</div>
-                        <div class='font2' style='font-size:100%;margin-top:3px;color:gray'>${shotObject.subtitle}</div>
+                        <div class='font2 dim' style='font-size:100%;margin-top:3px'>${shotObject.subtitle}</div>
                     </div>
                 </div>
-                <div style='font-size:90%;color:gray;margin-top:10px'>${shotObject.description}</div>
+                <div class='dim' style='font-size:90%;margin-top:10px'>${shotObject.description}</div>
             </div>
             <div class='container' style='width:200px;margin:0'>
                 <div style='width:200px'>
                     <img src='images/shot/${shot}.png' style='height:35px'>
                     <div>${shotObject.damage}
-                        <span style='color:gray;font-size:90%'> per bullet</span>
+                        <span class='dim' style='font-size:80%'> per bullet</span>
                         ${shotObject.num ? ' x ' + shotObject.num : ''}
-                        <br><span style='color:gray;font-size:90%'>every</span> ${shotObject.rate} <span style='color:gray;font-size:90%'>frames</span>
+                        <br><span class='dim' style='font-size:80%'>every</span> ${shotObject.rate} <span class='dim' style='font-size:80%'>frames</span>
                     </div>
                 </div>
                 ${shot == 'charge' ? `
                 <div><img src='images/shot/charge2.png' style='height:52px'></img>
-                46 <span style='color:gray;font-size:90%'> per bullet</span>
+                46 <span class='dim' style='font-size:80%'> per bullet</span>
                 </div>` : ''}
+            </div>
+            <div style='width:100px'>
+                <div class='container' style='margin-bottom:10px'>
+                <img src='images/shot/ex/${shot}.png' style='height:${['charge', 'converge'].includes(shot) ? 80 : 44}px'></img>
+                </div>
+                <div class='container'>
+                    <div style='font-size:80%'>${shotObject.exnum ? shotObject.ex : ''}
+                        ${shotObject.exnum ? ' x ' + shotObject.exnum : ''}
+                        ${shotObject.exnum ? `<span class="dim"> ${shotObject.exticks ? 'ticks' : 'bullets'}</span>` : ''}
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div style='width:50px;margin-left:25px'>
+                <div style='font-size:110%'>${shotObject.extotal ? shotObject.extotal : shotObject.ex}</div>
+                <div class='dim' style='font-size:80%'>EX</div>
             </div>
         </div>`
         return HTMLContent
@@ -74,8 +96,10 @@ const shotData = {
         dps: 30,
         damage: 4,
         rate: 8,
-        ex: `8.334 x 3 hits
-        <br>25 total`
+        ex: 8.334,
+        exnum: 3,
+        exticks: true,
+        extotal: 25
     },
     spread: {
         name: "SPREAD",
@@ -85,8 +109,9 @@ const shotData = {
         damage: 1.24,
         num: 5,
         rate: 9,
-        ex: `4.3 x 8 ticks
-        <br>34.4 total`
+        ex: 4.3,
+        exnum: 8,
+        extotal: 34.4
     },
     chaser: {
         name: "CHASER",
@@ -95,8 +120,9 @@ const shotData = {
         dps: 17.1,
         damage: 2.85,
         rate: 10,
-        ex: `7 x 4 bullets
-        <br>28 total`
+        ex: 7,
+        exnum: 4,
+        extotal: 28
     },
     lobber: {
         name: "LOBBER",
@@ -125,8 +151,10 @@ const shotData = {
         dps: 31.875,
         damage: 8.5,
         rate: 16,
-        ex: `5 x 7 ticks
-        <br>35 total`
+        ex: 5,
+        exnum: 7,
+        exticks: true,
+        extotal: 35
     },
     crackshot: {
         name: "CRACKSHOT",
@@ -135,7 +163,9 @@ const shotData = {
         dps: `30.17 / 19.14`,
         damage: `10.56 / 6.7`,
         rate: 21,
-        ex: 3.5
+        ex: 3.5,
+        exnum: '5*',
+        extotal: '21*'
     },
     converge: {
         name: "CONVERGE",
@@ -155,6 +185,9 @@ const shotData = {
         damage: 2.33,
         num: 3,
         rate: 13,
-        ex: 8
+        ex: 8,
+        exnum: 5,
+        exticks: true,
+        extotal: 40
     }
 };

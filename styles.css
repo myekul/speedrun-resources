@@ -36,6 +36,10 @@ header {
     border-radius: 5px
 }
 
+.dim {
+    color: gray
+}
+
 /* Monkey Tool */
 
 .monkeyColor {

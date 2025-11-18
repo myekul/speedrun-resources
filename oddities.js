@@ -96,8 +96,8 @@ function setBossInfo() {
         },
         cagneycarnation: {
             oddities: [
-                [phase('Final Phase', 2, ['1.1', 'lobber']),
-                `If you hug the right side of the screen and shoot down+left Lobber EXs, you can hit a triple spot. `
+                [phase('Final Phase', 2, ['lobber']),
+                `If you hug the right side of the screen and shoot down+left Lobber EXs, you can hit a crit spot. `
                 + dim('Note that these EXs will miss if Cagney is shooting a projectile.')
                 ]
             ]
@@ -342,17 +342,19 @@ function setBossInfo() {
                     `A sprite swap occurs during the Phase 1/2 transition.`
                 ],
                 [phase('Phase 2/3', 2, ['1.0', '1.1', 'lobber']),
-                `When Phase 2 ends, you can hug the ${myekulColor('left side')} of his platform and shoot down+right Lobber EXs to deal 4x damage on every EX.`
+                `When Phase 2 ends, you can hug the ${myekulColor('left side')} of his platform and shoot down+right Lobber EXs to deal 4x damage on every EX.
+                <span class='dim'>This works because of a double platform hitbox that only exists on 1.0 and 1.1.</span>`
                 ],
                 [phase('Phase 2/3', 3),
                     `When the cat appears on the screen during the Phase 2/3 transition,
-                    there is a brief moment where both hitboxes are overlapping.`
+                    there is a brief moment where both hitboxes are overlapping.
+                    <span class='dim'>You can use this opportunity to deal double damage.</span>`
                 ],
             ],
             tricks: [
-                [phase('Phase 1/2', '', ['1.0', '1.1', 'lobber']),
-                `Taking advantage of the Oddity #2 sprite swap, you can position yourself in a triple spot to land a 6x Lobber EX with precise timing.`
-                + dim('This has a 6-frame window, and it works on both sides.')
+                [phase('Phase 1/2', '', ['lobber','charge']),
+                    `Taking advantage of the Oddity #2 sprite swap, you can time a Lobber EX or Charge EX to deal lingering damage to both sprites.
+                <span class='dim'>This has a 6-frame window, and it works on both sides.</span>`
                 ],
             ]
         },
