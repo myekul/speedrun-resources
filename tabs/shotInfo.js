@@ -22,8 +22,8 @@ function generateShotInfo() {
             HTMLContent += shotDetails(shot, index)
         })
         HTMLContent += `</div></div>
-        <div class='container textBlock dim' style='font-size:80%;margin-top:20px'>
-        *Crackshot EX:
+        <div class='container dim' style='font-size:80%;margin-top:20px;width:550px'>
+        <span style='color:white'>*</span>Crackshot EX:
         <br>-The 5th and 6th turret shots are fired simulataneously as 2 overlapping bullets.
         <br>-Parrying the turret will launch it to a target for 14 damage.
         <br>-If an enemy collides with the turret, it will deal 12 damage.
