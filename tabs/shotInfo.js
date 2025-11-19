@@ -24,9 +24,10 @@ function generateShotInfo() {
         HTMLContent += `</div></div>
         <div class='container textBlock dim' style='font-size:80%;margin-top:20px'>
         *Crackshot EX:
-        <br>-The last (5th) bullet will hit for double damage, for a total of 21 damage.
-        <br>-Parrying the turret will launch it to a target for 12 damage.
-        <br>-If an enemy collides with the turret, it will deal 14 damage.
+        <br>-The 5th and 6th turret shots are fired simulataneously as 2 overlapping bullets.
+        <br>-Parrying the turret will launch it to a target for 14 damage.
+        <br>-If an enemy collides with the turret, it will deal 12 damage.
+        <br>-Letting the turret fire 4 times and then parrying it will result in a grand total of 28 damage.
         </div>`
     }
     function shotDetails(shot, index) {
@@ -164,7 +165,7 @@ const shotData = {
         damage: `10.56 / 6.7`,
         rate: 21,
         ex: 3.5,
-        exnum: '5*',
+        exnum: '6*',
         extotal: '21*'
     },
     converge: {
