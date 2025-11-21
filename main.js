@@ -50,7 +50,7 @@ function action() {
     tabActions[globalTab]?.()
 }
 function getImage(boss, size = 100, phase) {
-    return `<img src='https://myekul.github.io/shared-assets/cuphead/images/${phase ? 'phase/' : ''}${boss.id}${phase ? phase : ''}.png' style='height:${size}px'>`
+    return `<img src='https://myekul.com/shared-assets/cuphead/images/${phase ? 'phase/' : ''}${boss.id}${phase ? phase : ''}.png' style='height:${size}px'>`
 }
 function updateBoardTitle() {
     const boss = bossArray[globalBossIndex]

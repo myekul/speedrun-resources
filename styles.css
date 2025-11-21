@@ -31,9 +31,10 @@ header {
     max-width: 350px;
 }
 
-.border {
-    border: 3px solid var(--banner);
-    border-radius: 5px
+.toolButton {
+    height: 28px;
+    width: 60px;
+    border-radius: 20px
 }
 
 /* Monkey Tool */

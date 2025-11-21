@@ -119,9 +119,9 @@ function phase(phaseText, phase, extra) {
                 if (version) {
                     HTMLContent += `<div class='${version.className}' style='border-radius:5px;padding:1px 3px'>${elem}</div>`
                 } else if (elem == 'whetstone' || elem == 'astralcookie') {
-                    HTMLContent += `<img src='https://myekul.github.io/shared-assets/cuphead/images/inventory/charm/${elem}.png' style='height:21px'>`
+                    HTMLContent += `<img src='https://myekul.com/shared-assets/cuphead/images/inventory/charm/${elem}.png' style='height:21px'>`
                 } else if (elem.includes('super')) {
-                    HTMLContent += `<img src='https://myekul.github.io/shared-assets/cuphead/images/inventory/super/${elem}.png' style='height:21px'>`
+                    HTMLContent += `<img src='https://myekul.com/shared-assets/cuphead/images/inventory/super/${elem}.png' style='height:21px'>`
                 } else {
                     HTMLContent += cupheadShot(elem, 21)
                 }

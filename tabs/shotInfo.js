@@ -166,7 +166,7 @@ const shotData = {
         rate: 21,
         ex: 3.5,
         exnum: '6*',
-        extotal: '21*'
+        extotal: 21
     },
     converge: {
         name: "CONVERGE",
